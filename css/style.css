@@ -1,9 +1,209 @@
-*{
+:root {
+    /* Primary */
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    /* Gradients */
+    --Light-slate-blue-background: hsl(252, 100%, 67%);
+    --Light-royal-blue-background: hsl(241, 81%, 54%);
+    --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+    --Persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family: 'Hanken Grotesk', sans-serif;
+body {
+    min-height: 100vh;
+    background-color: var(--White);
+
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 1.125rem;
+    display: grid;
+    place-content: center;
+}
+
+.card {
+    max-width: 375px;
+    background-color: var(--White);
+    border-radius: 25px;
+    box-shadow: 2px 12px 30px 6px hsl(221, 100%, 96%);
+}
+
+.card-top {
+    background: linear-gradient(var(--Light-slate-blue-background),
+            var(--Light-royal-blue-background));
+    color: var(--Light-lavender);
+    text-align: center;
+    padding: 1.5rem 3rem 2.5rem;
+    border-radius: 25px;
+}
+
+.card-top h1 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.result-circel {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    background: linear-gradient(var(--Violet-blue-circle),
+            var(--Persian-blue-circle));
+    padding: 1.3rem;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.result-circel p {
+    font-size: 1rem;
+    font-weight: 700;
+    color: hsl(252, 100%, 76%);
+}
+
+.result-circel .result-in-numbers {
+    display: block;
+    color: var(--White);
+    font-size: 3.6rem;
+    font-weight: 800;
+}
+
+.card-text .result-in-words {
+    color: var(--White);
+    margin-bottom: 0.5rem;
+}
+
+.card-text p {
+    font-size: 1rem;
+}
+
+.card-bottom {
+    padding: 2rem;
+}
+
+.card-bottom .summary {
+    font-weight: 800;
+    margin-bottom: 1.3rem;
+    margin-left: 0.2rem;
+}
+
+.summary-box {
+    background-color: rgb(175, 162, 162);
+    color: hsla(224, 30%, 27%, 65%);
+    font-size: 1rem;
+    font-weight: 800;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.summary-box .category {
+    display: flex;
+    gap: 0.7rem;
+}
+
+.summary-box span {
+    color: var(--Dark-gray-blue);
+}
+
+.reaction {
+    background-color: hsla(0, 100%, 67%, 9%);
+}
+
+.reaction-category {
+    color: var(--Light-red);
+}
+
+.memory {
+    background-color: hsla(39, 100%, 56%, 9%);
+}
+
+.memory-category {
+    color: var(--Orangey-yellow);
+}
+
+.verbal {
+    background-color: hsla(166, 100%, 37%, 9%);
+}
+
+.verbal-category {
+    color: var(--Green-teal);
+}
+
+.visual {
+    background-color: hsla(234, 85%, 45%, 9%);
+}
+
+.visual-category {
+    color: var(--Cobalt-blue);
+}
+
+.btn-continue {
+    width: 100%;
+    background-color: var(--Dark-gray-blue);
+    color: var(--White);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    padding: 1rem;
+    border: none;
+    border-radius: 25px;
+    margin-top: 1rem;
+}
+
+.btn-continue:hover,
+.btn-continue:focus {
+    cursor: pointer;
+    background: linear-gradient(var(--Light-slate-blue-background),
+            var(--Light-royal-blue-background));
+}
+
+@media (min-width: 1440px) {
+    .card {
+        max-width: 680px;
+        display: flex;
+    }
+
+    .card-top {
+        min-width: 50%;
+        padding-top: 2rem;
+    }
+
+    .result-circel {
+        width: 200px;
+        height: 200px;
+    }
+
+    .result-circel .result-in-numbers {
+        font-size: 4rem;
+        font-weight: 800;
+    }
+
+    .card-text p {
+        max-width: 300px;
+    }
+
+    .card-bottom {
+        min-width: 50%;
+    }
+
+    .card-bottom .summary {
+        font-size: 1.2rem;
+    }
 }
