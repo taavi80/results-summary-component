@@ -41,7 +41,7 @@ body {
     box-shadow: 2px 12px 30px 6px hsl(221, 100%, 96%);
 }
 
-.card-top {
+header {
     background: linear-gradient(var(--Light-slate-blue-background),
             var(--Light-royal-blue-background));
     color: var(--Light-lavender);
@@ -50,7 +50,7 @@ body {
     border-radius: 25px;
 }
 
-.card-top h1 {
+header h1 {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
 }
@@ -180,7 +180,7 @@ main .summary{
         display: flex;
     }
 
-    .card-top {
+    header {
         min-width: 50%;
         padding-top: 2rem;
     }
