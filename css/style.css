@@ -90,11 +90,11 @@ body {
     font-size: 1rem;
 }
 
-.card-bottom {
+main{
     padding: 2rem;
 }
 
-.card-bottom .summary {
+main .summary{
     font-weight: 800;
     margin-bottom: 1.3rem;
     margin-left: 0.2rem;
@@ -199,11 +199,11 @@ body {
         max-width: 300px;
     }
 
-    .card-bottom {
-        min-width: 50%;
+    main{
+        min-width: 50%;      
     }
 
-    .card-bottom .summary {
+    main .summary{
         font-size: 1.2rem;
     }
 }
